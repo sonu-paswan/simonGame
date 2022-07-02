@@ -1,5 +1,5 @@
 // for game logic
-$(document).ready(()=>{
+// $(document).ready(()=>{
 
 
 var buttonColours = ["red", "blue", "green", "yellow"]; // array of colors
@@ -19,6 +19,13 @@ toggler=true;
 $("#level-title").text("level "+level);
 }
 });
+function start(){
+  if(!toggler){
+    nextSequence();
+    toggler=true;
+    $("#level-title").text("level "+level);
+    }
+}
 
 function nextSequence() {
   // reseting user clicked array every time  this function is called
@@ -92,4 +99,4 @@ $("."+color).removeClass("pressed");
 },100);
 }
 
-});
+// });
